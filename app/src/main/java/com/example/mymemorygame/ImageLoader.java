@@ -2,19 +2,20 @@ package com.example.mymemorygame;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
+
 import android.os.AsyncTask;
+import android.util.Patterns;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
+import android.webkit.URLUtil;
+
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
 
 import java.io.BufferedReader;
-import java.io.IOException;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
@@ -31,6 +32,7 @@ public class ImageLoader extends AsyncTask<String,Integer,Boolean> {
     private static final String imgType = "([^\\s]+(\\.(?i)(jpg|png))$)";
 
     private Bitmap[] images=new Bitmap[20];
+    private String[] urlList=new String[20];
 
     public ImageLoader(MainActivity parent){
         this.parent=new WeakReference<>(parent);
@@ -51,7 +53,7 @@ public class ImageLoader extends AsyncTask<String,Integer,Boolean> {
             int i=0;
             while ((inputLine = in.readLine()) != null && i<20){
                String oneSrcLine=this.extractSource(inputLine);
-               if (oneSrcLine != null){
+               if (oneSrcLine != null && (URLUtil.isValidUrl(oneSrcLine) && Patterns.WEB_URL.matcher(oneSrcLine).matches())){
                    URL imgUrl=new URL(oneSrcLine);
                    HttpURLConnection connection =(HttpURLConnection)imgUrl.openConnection();
                    connection.setDoInput(true);
@@ -60,6 +62,7 @@ public class ImageLoader extends AsyncTask<String,Integer,Boolean> {
                    InputStream input=connection.getInputStream();
                    Bitmap bmp= BitmapFactory.decodeStream(input);
                    images[i]=bmp;
+                   urlList[i]=oneSrcLine;
                    publishProgress(i);
                    i++;
 
@@ -74,6 +77,7 @@ public class ImageLoader extends AsyncTask<String,Integer,Boolean> {
 
         }catch (Exception e)
         {
+            e.printStackTrace();
             return null;
         }
 
@@ -110,6 +114,8 @@ public class ImageLoader extends AsyncTask<String,Integer,Boolean> {
         if (this.parent!=null){
             MainActivity parent = this.parent.get();
             if (load==true){
+                parent.urlList20=this.urlList;
+
                 ProgressBar bar = parent.findViewById(R.id.progressBar);
                 bar.setProgress(0);
                 bar.setVisibility(View.INVISIBLE);
@@ -117,13 +123,7 @@ public class ImageLoader extends AsyncTask<String,Integer,Boolean> {
                 TextView downloadedCount=parent.findViewById(R.id.downloadedCount);
                 downloadedCount.setText("");
             }
-
-
-
-
         }
-
-
     }
 
 
