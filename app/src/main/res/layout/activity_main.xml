@@ -18,16 +18,16 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="type url here..."
-            android:textSize="11pt"
+            android:text="https://stocksnap.io"
+            android:textSize="9pt"
             android:id="@+id/typeurl"
-            android:layout_weight="5"
+            android:layout_weight="7"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:text="Fetch"
-            android:textSize="12pt"
+            android:textSize="9pt"
             android:id="@+id/fetchbtn"
             android:layout_weight="1"
             />
@@ -37,8 +37,8 @@
         android:id="@+id/imgFrame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.8"
-        app:layout_constraintBottom_toBottomOf="@+id/mainframe"
+        app:layout_constraintHeight_percent="0.84"
+        app:layout_constraintTop_toBottomOf="@+id/urlFrame"
         android:orientation="vertical"
 
         >
@@ -51,6 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img0"
                 android:layout_weight="1"
                 />
@@ -58,6 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img1"
                 android:layout_weight="1"
                 />
@@ -65,6 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img2"
                 android:layout_weight="1"
                 />
@@ -72,6 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img3"
                 android:layout_weight="1"
                 />
@@ -84,24 +88,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img4"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img5"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img6"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img7"
                 android:layout_weight="1"/>
         </LinearLayout>
@@ -113,24 +121,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img8"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img9"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img10"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img11"
                 android:layout_weight="1"/>
         </LinearLayout>
@@ -142,24 +154,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img12"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img13"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img14"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img15"
                 android:layout_weight="1"/>
         </LinearLayout>
@@ -171,24 +187,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img16"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img17"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img18"
                 android:layout_weight="1"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerInside"
                 android:id="@+id/img19"
                 android:layout_weight="1"/>
         </LinearLayout>
@@ -197,8 +217,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintBottom_toTopOf="@+id/imgFrame"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toBottomOf="@+id/imgFrame"
         android:orientation="vertical"
         android:gravity="center_horizontal"
         >
@@ -209,11 +229,11 @@
             android:progress="1"
             android:indeterminate="false"
             android:layout_width="268dp"
-            android:layout_height="33dp"
+            android:layout_height="10dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -227,7 +247,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
 
-            android:textSize="10pt"
+            android:textSize="9pt"
             android:gravity="center_horizontal"/>
 
     </LinearLayout>
